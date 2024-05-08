@@ -1,0 +1,30 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: red;
+    float: right;
+    background-image: url(../../assets/bg.png);background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -10;
+}
+
+.hero h1 {
+    font-size: 65px;
+}
+
+.hero p {
+    margin-top: -45px;
+    font-size: 25px;
+}
+
+.hero p span {
+    border-bottom: 3px solid #149ddd;
+}
