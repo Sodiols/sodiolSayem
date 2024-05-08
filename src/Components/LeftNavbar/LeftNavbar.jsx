@@ -8,7 +8,6 @@ const LeftNavbar = () => {
     const openNavbar = () => {
         navbar.style.display = "block";
         cross.style.display="block";
-        bars.style.display="none;"
     }
     const closeNavbar = () => {
         navbar.style.display = "none";
