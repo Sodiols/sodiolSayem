@@ -29,6 +29,16 @@ const LeftNavbar = () => {
         };
     }, []);
 
+    const handleLinkClick = (event) => {
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="NavBar">
             <div className="navBarBtns">
@@ -38,24 +48,24 @@ const LeftNavbar = () => {
             <div className="container">
                 <div className="profile">
                     <div className="name-img">
-                        <img src={logo} className="logoImg rounded-circle" alt="logo"/>
+                        <img src={logo} className="logoImg rounded-circle" alt="logo" />
                         <br />
-                        <a href="#home">Sodiol Sayem</a>
+                        <a href="#home" onClick={handleLinkClick}>Sodiol Sayem</a>
                     </div>
                     <div className="links">
-                        <a href="https://www.facebook.com/profile.php?id=100090420093597"><i className="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/sodiol_sayem/"><i className="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100090420093597" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/sodiol_sayem/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
                         <a href="mailto:itssayem2023@gmail.com"><i className="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
                 <div className="navbar">
                     <ul>
-                        <li><a href="#home" className="active"><i className="bi bi-house-door"></i> <span>Home</span></a></li>
-                        <li><a href="#about"><i className="bi bi-person-fill"></i> <span>About</span></a></li>
-                        <li><a href="/"><i className="bi bi-file-earmark"></i> <span>Resume</span></a></li>
-                        <li><a href="/"><i className="bi bi-person-vcard-fill"></i> <span>Portfolio</span></a></li>
-                        <li><a href="/"><i className="bi bi-braces"></i> <span>Services</span></a></li>
-                        <li><a href="/"><i className="bi bi-envelope"></i> <span>Contact</span></a></li>
+                        <li><a href="#home" className="active" onClick={handleLinkClick}><i className="bi bi-house-door"></i> <span>Home</span></a></li>
+                        <li><a href="#about" onClick={handleLinkClick}><i className="bi bi-person-fill"></i> <span>About</span></a></li>
+                        <li><a href="/" onClick={handleLinkClick}><i className="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+                        <li><a href="/" onClick={handleLinkClick}><i className="bi bi-person-vcard-fill"></i> <span>Portfolio</span></a></li>
+                        <li><a href="/" onClick={handleLinkClick}><i className="bi bi-braces"></i> <span>Services</span></a></li>
+                        <li><a href="/" onClick={handleLinkClick}><i className="bi bi-envelope"></i> <span>Contact</span></a></li>
                     </ul>
                 </div>
                 <div className="footer">
