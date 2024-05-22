@@ -5,6 +5,7 @@
     height: 100vh;
     font-family: "Ubuntu Sans Mono", monospace;
     position: fixed;
+    overflow-y: auto;
 }
 
 .container .profile {
@@ -47,6 +48,7 @@ a {
 
 .navbar ul {
     list-style: none;
+    padding-left: 0; /* Remove default padding */
 }
 
 .navbar ul li {
@@ -79,7 +81,7 @@ a {
     position: relative;
 }
 
-.navbar li a:hover::after, .navbar li a.active::after {
+.navbar li a.active::after {
     content: "";
     width: 35%;
     height: 1px;
@@ -87,6 +89,22 @@ a {
     position: absolute;
     bottom: -4px;
     left: 28px;
+    transition: .3s ease;
+}
+
+.navbar li a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: #149ddd;
+    position: absolute;
+    bottom: -4px;
+    left: 28px;
+    transition: .3s ease;
+}
+
+.navbar li a:hover::after {
+    width: 35%;
 }
 
 .footer {
@@ -131,8 +149,5 @@ a {
 @media (max-width: 768px) {
     .bars {
         display: block;
-    }
-    .container {
-        width: 100%;
     }
 }
