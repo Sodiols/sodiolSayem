@@ -2,7 +2,7 @@ import "./skills.css";
 
 const Skills = () => {
     return (
-        <div className="skills">
+        <div className="skills" id="skill">
             <h2 className="header-h2">Where am I <br /> Expert In?</h2>
             <div className="skills-cont">
                 <span><i class="fa-brands fa-html5"></i> creating visually architect by HTMl</span> <br/>
