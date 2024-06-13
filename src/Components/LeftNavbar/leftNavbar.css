@@ -1,0 +1,118 @@
+.container {
+    background: #040b14;
+    color: #fff;
+    width: 20%;
+    height: 100vh;
+    font-family: "Ubuntu Sans Mono", monospace;
+    position: fixed;
+}
+
+.container .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container .name-img .logoImg {
+    width: 100px;
+    border: 7px solid #2c2f3f;
+}
+
+.container .links {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.container .links a {
+    font-size: 25px;
+    background: #2c2f3f;
+    padding: 12px;
+    border-radius: 100%;
+    color: #007bff;
+    margin-left: 15px;
+    font-size: 13px;
+    transition: .2s all ease-in;
+}
+
+.container .links a:hover  {
+    color: #fff;
+    background: #149ddd;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-top: 35px;
+    font-size: 18px;
+}
+
+.navbar ul li a {
+    color: #6c6e7e;
+    transition: .2s all ease-in ;
+}
+
+.navbar ul li a i {
+    transition: .2s all ease-in;
+}
+
+.navbar ul li a:hover i {
+    color: #149ddd;
+}
+
+.navbar ul li a span {
+    transition: .2s all ease-in;
+}
+
+.navbar ul li a:hover span {
+    color: #fff;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 13px;
+    line-height: 1px;
+}
+
+.footer p span {
+    font-size: 20px;
+}
+
+.footer p a {
+    color: #149ddd;
+}
+
+.navBarBtns .navBarBtn {
+    position: fixed;
+    right:0;
+    font-size: 30px;
+    background: #149ddd;
+    padding: 9px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.cross, .bars {
+    display: none;
+    z-index: 100;
+}
+
+@media (max-width:768px) {
+    .bars {
+        display: block;
+    }
+}
